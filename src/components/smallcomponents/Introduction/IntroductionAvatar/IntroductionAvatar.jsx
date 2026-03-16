@@ -85,7 +85,8 @@ function IntroductionAvatar() {
                     {viewState === 'minimized' && (
                         <div className={styles.summaryView}>
                             <p className={styles.summaryText}>
-                                Also known as Dsplyy_Nme. Yes, the window controls work!
+                                Also known as borj410.<br/>
+                                Yes, the window controls work!
                             </p>
                             <span className={styles.summaryKaomoji} aria-hidden="true">(· ·)</span>
                         </div>
