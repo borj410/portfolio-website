@@ -85,6 +85,11 @@
   animation: pushClick 0.2s ease;
 }
 
+.avatarImage:hover {
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
 @keyframes pushClick {
   0% {
     transform: translateY(-1px);
