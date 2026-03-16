@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useMediaQuery } from 'react-responsive'; // Import the hook
+import { useMediaQuery } from 'react-responsive';
 import styles from "./IntroductionAvatar.module.css";
 import * as Images from '../../../../assets/images';
 

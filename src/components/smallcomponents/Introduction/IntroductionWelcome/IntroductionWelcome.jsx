@@ -5,7 +5,6 @@ import CV from '../../../../assets/documents/Gabriel_Borja_CV.pdf'
 function IntroductionWelcome() {
     return (
         <div className={styles.introductionWelcomeSide}>
-            {/* Background Kaomoji - Hidden as discussed */}
             <div className={styles.kaomojiBackground} aria-hidden="true">
                 <span className={styles.kaomojiText}></span>
             </div>
