@@ -1,0 +1,174 @@
+.welcomeTitle {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin: 0 0 15px 0;
+  text-shadow: 0 0 10px var(--intro-border-color);
+  text-transform: uppercase;
+}
+
+.systemDescription {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1rem;
+  max-width: 600px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.highlightText {
+  color: var(--intro-border-color);
+  font-weight: bold;
+}
+
+.contactGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.contactLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--intro-border-color);
+  padding: 8px 16px;
+  transition: all 0.2s ease-in-out;
+  color: var(--intro-border-color);
+  cursor: pointer;
+  background: transparent;
+
+  font-family: 'Fira Code', monospace;
+  text-decoration: none; 
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.contactLine:hover {
+  background-color: var(--intro-border-color);
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.contactIcon {
+  filter: invert(72%) sepia(95%) saturate(300%) hue-rotate(200deg); 
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.contactLine:hover .contactIcon {
+  filter: invert(0%) brightness(0%);
+}
+
+.systemBtn {
+  background: transparent;
+  color: inherit;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  padding: 0;
+  pointer-events: none;
+}
+
+.introductionWelcomeSide {
+  flex-grow: 1;
+  font-family: 'Fira Code', monospace;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.kaomojiBackground {
+    position: absolute;
+    top: -10px;
+    right: -40px;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    display: flex;
+    color: var(--intro-border-color);
+    justify-content: flex-end; 
+    align-content: flex-start; 
+    padding: 40px;
+    font-size: 7.5rem;
+    opacity: 0.05;
+    font-family: monospace;
+}
+
+.kaomojiText {
+    position: relative;
+    display: inline-block;
+}
+
+.kaomojiText::after {
+    content: "(0 0)";
+    animation: blinkAnimation 12s infinite;
+}
+
+@keyframes blinkAnimation {
+    0%, 96%, 98%, 100% {
+        content: "(0 0)";
+    }
+    97%, 99% {
+        content: "(- -)";
+    }
+}
+
+.welcomeTitle, .systemDescription, .contactGrid {
+  position: relative;
+  z-index: 1;
+}
+
+.metaData {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.label {
+  color: var(--intro-border-color);
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.cvButton {
+    border-width: 2px;
+    background-color: black;
+    flex: 1 1 250px;
+    max-width: 450px;
+    box-sizing: border-box;
+}
+
+.cvButton:hover .contactIcon {
+    filter: invert(0%) brightness(0%);
+}
+
+.contactLine:not(.cvButton) {
+    flex: 1 0 auto;
+    min-width: 140px;
+}
+
+.contactLine:hover .systemBtn {
+  font-weight: 600;
+}
+
+@media (max-width: 1053px) {
+  .kaomojiBackground {
+    font-size: 5rem;
+    padding: 20px;
+    right: -20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kaomojiText::after {
+    animation: none;
+    content: "(0 0)";
+  }
+}

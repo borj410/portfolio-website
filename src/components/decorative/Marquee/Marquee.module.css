@@ -1,0 +1,107 @@
+:root {
+  --marquee-duration: 20s;
+  --marquee-font-size: 0.8rem;
+  --marquee-track-bg: #DB1250;
+  --marquee-track-color: white;
+
+  --marquee-track-padding: 4px; 
+  --marquee-item-gap: 15vw;
+  --marquee-group-offset: 15vw;
+  --marquee-item-padding: 2px 0px;
+}
+
+.marqueeContainer {
+  width: 100%;
+  font-size: var(--marquee-font-size);
+
+  background-color: var(--marquee-track-bg);
+  border-top: 1px solid #000000;
+  color: var(--marquee-track-color);
+
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  user-select: none;
+
+  padding: var(--marquee-track-padding) 0;
+  padding-bottom: calc(var(--marquee-track-padding) + 1px);
+  position: fixed;
+
+  bottom: -1px;
+  left: 0;
+  right: 0;
+
+  line-height: 1;
+
+  z-index: 9999;
+}
+
+.marqueeContent {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  flex-wrap: nowrap;
+  will-change: transform;
+  transform: translateZ(0);
+
+  animation: marquee var(--marquee-duration) linear infinite;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.marqueeGroup {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: var(--marquee-item-gap);
+  padding-right: var(--marquee-group-offset);
+}
+
+.marqueeItem {
+  margin: 0;
+  padding: var(--marquee-item-padding);
+  color: var(--marquee-track-color);
+  display: block;
+  font-weight: bold;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marqueeContainer:hover .marqueeContent {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marqueeContent {
+    animation: none;
+  }
+}
+
+.marqueeItem {
+  margin: 0;
+  padding: var(--marquee-item-padding);
+  color: var(--marquee-track-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.prizeLink {
+  color: var(--marquee-track-color);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: all 0.1s steps(2);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.prizeLink:hover {
+  background-color: var(--marquee-track-color);
+  color: var(--marquee-track-bg);
+  text-decoration: underline;
+}

@@ -1,0 +1,53 @@
+:root {
+  --interactive-border-color: hsla(340, 65%, 69%, 1);
+  --interactive-outline-color: hsla(340, 65%, 69%, 0.15);
+  --interactive-bg-color: hsla(340, 65%, 69%, 0.04);
+}
+
+.dvdScreen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  max-height: 600px;
+  overflow: hidden;
+  background-color: black;
+
+  border: 2px solid var(--interactive-border-color);
+  outline: 4px solid var(--interactive-outline-color);
+  
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.dvdScreenLogo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  line-height: 1;
+  display: inline-block;
+  color: black;
+  user-select: none;
+}
+
+.dvdScreenLogo p {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  font-weight: bold;
+  white-space: nowrap;
+
+  font-size: clamp(1rem, 8cqw, 2rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dvdScreenLogo {
+        animation: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+        color: var(--interactive-border-color) !important;
+    }
+}

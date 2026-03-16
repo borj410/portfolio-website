@@ -1,0 +1,30 @@
+:root {
+  --intro-background-color: hsla(239, 50%, 4%, 0.8);
+  --intro-border-color: hsl(239, 50%, 71%);
+  --intro-outline-color: hsla(239, 50%, 71%, 0.2);
+}
+
+.introductionContainer {
+  height: 100%;
+  width: 100%;
+  background-color: var(--intro-background-color);
+  border: 2px solid var(--intro-border-color);
+  outline: 4px solid var(--intro-outline-color);
+  backdrop-filter: blur(8px);
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  box-sizing: border-box;
+  gap: 30px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  .introductionContainer {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+}

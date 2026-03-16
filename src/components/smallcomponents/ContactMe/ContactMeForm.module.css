@@ -1,0 +1,157 @@
+
+.retroForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 370px;
+    
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto;
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.retroLabel {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: var(--contact-border-color);
+    font-weight: bold;
+}
+
+.retroInput, .retroTextArea {
+    background-color: #000;
+    border: 2px solid;
+    border-color: #444 #eee #eee #444; 
+    color: #00ffcc;
+    padding: 8px;
+    font-family: 'Fira Code', monospace;
+    outline: none;
+    scrollbar-width: 12px;
+}
+
+.retroTextArea {
+    overflow-y: auto;
+}
+
+.retroInput:focus, .retroTextArea:focus {
+    border-color: var(--contact-border-color);
+    box-shadow: 0 0 5px var(--contact-border-color);
+}
+
+.retroTextArea:focus {
+    scrollbar-color: var(--stack-background-color) var(--stack-border-color);
+}
+
+.retroTextArea::-webkit-scrollbar-button {
+    background-color: var(--stack-border-color);
+    display: block;
+    border: 2px solid #000;
+}
+
+.retroTextArea::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+}
+
+.sendBtn {
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: var(--contact-border-color); 
+    border-radius: 0px;
+    border: 2px solid;
+    border-color: hsla(334, 67%, 80%, 1) hsla(334, 67%, 30%, 1) hsla(334, 67%, 30%, 1) hsla(334, 67%, 80%, 1);
+    
+    padding: 10px;
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    box-sizing: border-box;
+    width: 100%;
+    
+    transition: all 0.2s ease;
+    text-shadow: 0 0 2px var(--contact-border-color);
+}
+
+.sendBtn:hover:not(:disabled) {
+    background-color: rgba(181, 46, 116, 0.2);
+}
+
+.sendBtn:active {
+    border-color: hsla(334, 67%, 30%, 1) hsla(334, 67%, 80%, 1) hsla(334, 67%, 80%, 1) hsla(334, 67%, 30%, 1);
+    padding: 11px 9px 9px 11px;
+    background-color: rgba(181, 46, 116, 0.4);
+}
+
+.sendBtn:disabled {
+    cursor: not-allowed;
+    filter: saturate(0.2) brightness(0.5);
+    opacity: 0.6;
+    border-color: #444;
+}
+
+.loadingDots {
+    position: relative;
+    padding-right: 0.1em;
+    font-family: 'Fira Code', monospace;
+}
+
+.loadingDots::after {
+    content: '';
+    display: inline-block; 
+    width: 1.5em; 
+    text-align: left;
+    animation: dots 2s steps(4, end) infinite;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+@keyframes dots {
+    0%, 20%   { content: '\a0\a0\a0'; } 
+    40%       { content: '.\a0\a0'; }
+    60%       { content: '..\a0'; }
+    80%, 100% { content: '...'; }
+}
+
+.privacyNote {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.65rem;
+    color: var(--contact-border-color);
+    opacity: 0.6;
+    text-align: right;
+    align-self: flex-end;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.privacyNote a {
+    color: var(--contact-border-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.privacyNote a:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-shadow: 0 0 5px var(--contact-border-color);
+}
+
+@media (max-width: 800px) {
+    .retroForm {
+        height: auto;
+    }
+
+    .privacyNote {
+        align-self: center;
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.6rem;
+    }
+}

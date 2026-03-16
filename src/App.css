@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  margin-top: 25px;
+  background-color: #0a0a0a;
+  box-sizing: border-box;
+
+background-image:
+    radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px), 
+    linear-gradient(to bottom, #0F0F2A, #0a0a0a);
+
+  background-size: 20px 20px, auto;
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+
+  position: relative;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  
+  align-items: stretch;
+  justify-content: center;
+
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+body::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.1) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+body::before {
+  content: " ";
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: rgba(255, 255, 255, 0.01);
+  opacity: 0;
+  z-index: 9998;
+  pointer-events: none;
+  animation: flicker 0.1s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0; }
+  50% { opacity: 0.02; }
+  100% { opacity: 0; }
+}
+
+.App {
+  box-sizing: border-box;
+  width: 95%;
+  max-width: 1400px;
+  
+  margin: 0 auto;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+  align-items: stretch;
+  justify-content: center;
+  scroll-margin-top: 59px;
+}
+
+.introduction-container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto 16px;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  scroll-margin-top: 59px;
+  gap: 16px;
+}
+
+.stack-projects-container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  max-height: 1600px;
+  scroll-margin-top: 45px;
+}
+
+.stack-container,
+.projects-container {
+  scroll-margin-top: 45px;
+}
+
+.education-work-container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  scroll-margin-top: 45px;
+}
+
+.contact-me-container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  scroll-margin-top: 45px;
+}
+
+.App > *:not(script) {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .stack-projects-container,
+  .education-work-container,
+  .contact-me-container {
+    flex-direction: column !important;
+  }
+
+  .stack-projects-container > div,
+  .education-work-container > div,
+  .contact-me-container > div {
+    width: 100% !important;
+  }
+
+  .stack-projects-container {
+    max-height: none;
+  }
+  
+  .App {
+    width: 98%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .introduction-container {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  .introduction-container > div {
+    width: 100% !important;
+  }
+
+  .App {
+    margin-top: 20px;
+  }
+
+  .introduction-container,
+  .stack-projects-container,
+  .education-work-container,
+  .contact-me-container {
+    scroll-margin-top: 90px; 
+  }
+}
+
+@media (max-width: 424px) {
+  .App {
+    margin-top: 45px;
+    padding: 0 5px;
+  }
+
+  .introduction-container,
+  .stack-projects-container,
+  .education-work-container,
+  .stack-container,
+  .projects-container,
+  .contact-me-container {
+    scroll-margin-top: 110px; 
+  }
+}

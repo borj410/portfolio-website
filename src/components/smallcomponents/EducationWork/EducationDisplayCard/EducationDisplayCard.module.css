@@ -1,0 +1,79 @@
+.displayCard {
+  border: 1px solid var(--card-accent);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 16px 16px 16px 24px;
+  margin-bottom: 24px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.displayCard::after {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--card-accent);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.title {
+  color: var(--card-accent);
+  margin: 0;
+  font-size: 1.15em;
+  text-transform: uppercase;
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+.subTitle {
+  font-weight: bold;
+  margin: 4px 0;
+  color: #fff;
+}
+
+.dateTag {
+  display: inline-block;
+  background: var(--card-accent);
+  color: #000;
+  font-size: 0.75em;
+  font-weight: 900;
+  padding: 2px 8px;
+  margin: 8px 0;
+  letter-spacing: 1px;
+  user-select: none;
+  transition: background 0.4s ease;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #ccc;
+  line-height: 1.5;
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+@media (max-width: 500px) {
+  .displayCard {
+    padding: 12px 12px 12px 16px;
+  }
+
+  .title {
+    font-size: 1em;
+  }
+
+  .dateTag {
+    font-size: 0.65em;
+    padding: 1px 6px;
+  }
+}
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

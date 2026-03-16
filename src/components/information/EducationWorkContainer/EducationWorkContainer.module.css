@@ -1,0 +1,242 @@
+:root {
+  --edwork-background-color: hsla(180, 50%, 4%, 0.85);
+  --edwork-border-color: hsla(180, 100%, 75%, 1);
+  --edwork-outline-color: hsla(180, 100%, 50%, 0.15);
+
+  --edu-cyan: hsla(180, 100%, 75%, 1);
+  --work-pink: hsla(331, 100%, 50%, 1);
+}
+
+.educationWorkContainer {
+  --current-accent: var(--edu-cyan);
+  --current-bg-soft: hsla(180, 50%, 4%, 0.85);
+  --current-glow: hsla(180, 100%, 50%, 0.5);
+  --current-glow-soft: hsla(180, 80%, 50%, 0.2);
+
+  background-color: var(--current-bg-soft);
+  border: 2px solid var(--current-accent);
+  outline: 4px solid var(--edwork-outline-color);
+  box-sizing: border-box;
+  backdrop-filter: blur(8px);
+  
+  margin: 0 auto;
+  height: 500px;
+  min-height: 200px;
+  
+  padding: 0 24px 24px 24px; 
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.workMode {
+  --current-accent: var(--work-pink);
+  --current-glow: rgba(255, 0, 122, 0.5);
+  --current-glow-soft: rgba(255, 0, 122, 0.2);
+  outline-color: rgba(255, 0, 122, 0.15);
+}
+
+.educationWorkHeader {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+  background-color: #020808; 
+  
+  margin: 0 -24px 20px -24px;
+  padding: 20px 24px 15px 24px;
+  
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--current-accent);
+  transition: border-bottom 0.4s ease;
+  user-select: none;
+}
+
+.toggleWrapper {
+  position: relative;
+  width: 300px; 
+  height: 44px;
+  background-color: var(--current-accent);
+  transition: background-color 0.4s ease;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+  user-select: none;
+}
+
+.toggleSlider {
+  position: absolute;
+  left: 6px;
+  top: 5px;
+  width: 142px;
+  height: 30px;
+  background-color: #050505;
+  border: 1px solid var(--current-accent);
+  transition: transform 0.2s ease-out, border-color 0.4s ease;
+  z-index: 1;
+}
+
+.slideRight {
+  transform: translateX(144px); 
+}
+
+.toggleLabel {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  font-family: 'Fira Code', monospace;
+  font-weight: 900;
+  font-size: 0.85rem;
+  color: #050505;
+  transition: color 0.1s;
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.labelActive {
+  color: var(--current-accent);
+  text-shadow: 0 0 8px var(--current-accent);
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+.contentArea {
+  color: white;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.educationWorkTitle {
+  color: var(--current-accent);
+  font-family: 'Fira Code', monospace;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 0 0 8px var(--current-glow);
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+.educationWorkContainer::-webkit-scrollbar {
+  width: 14px;
+}
+
+.educationWorkContainer::-webkit-scrollbar-track {
+  background: var(--current-accent);
+  transition: background 0.4s ease;
+}
+
+.educationWorkContainer::-webkit-scrollbar-thumb {
+  background: #050505; 
+  border: 2px solid var(--current-accent);
+  transition: border-color 0.4s ease;
+}
+
+.educationWorkContainer::-webkit-scrollbar-thumb:hover {
+  background: #121212; 
+  border-color: var(--current-accent);
+  box-shadow: inset 0 0 10px var(--current-accent);
+}
+
+.educationWorkContainer::-webkit-scrollbar-button:single-button {
+  background-color: var(--current-accent);
+  display: block;
+  border: 1px solid #000;
+  height: 20px;
+  transition: background-color 0.4s ease;
+}
+
+.educationWorkContainer::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='black'><polygon points='50,20 20,80 80,80'/></svg>");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+
+
+.educationWorkContainer::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='black'><polygon points='50,80 20,20 80,20'/></svg>");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.terminalPrompt {
+  color: #FFFFFF;
+  line-height: 1.6;
+  font-family: 'Fira Code', monospace;
+  border-left: 3px solid var(--current-accent);
+  user-select: none;
+  padding-left: 15px;
+  transition: border-left 0.4s ease;
+}
+
+.kaomoji {
+  display: inline-block;
+  transition: transform 0.1s;
+  user-select: none;
+}
+
+@media (max-width: 800px) {
+  .educationWorkHeader {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .educationWorkContainer {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .educationWorkContainer::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .educationWorkTitle {
+    font-size: 1.2em;
+  }
+}
+
+button.toggleWrapper {
+  border: 2px solid black;
+  padding: 0;
+  appearance: none;
+  background-color: var(--current-accent);
+
+  display: flex; 
+  align-items: center;
+  justify-content: space-around;
+}
+
+button.toggleWrapper:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

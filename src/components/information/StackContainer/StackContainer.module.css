@@ -1,0 +1,149 @@
+:root {
+  --stack-background-color: hsla(334, 70%, 4%, 0.8); 
+  --stack-border-color: hsla(334, 67%, 55%, 1); 
+  --stack-outline-color: hsla(334, 67%, 50%, 0.2);
+}
+
+.stackContainer {
+  background-color: var(--stack-background-color);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  max-height: 990px;
+
+  border: 2px solid var(--stack-border-color);
+  outline: 4px solid var(--stack-outline-color);
+  backdrop-filter: blur(4px); 
+
+  padding: 0 16px 16px 16px; 
+  margin: 0 auto;
+
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  
+  scrollbar-width: 12px;
+  scrollbar-color: var(--stack-background-color) var(--stack-border-color);
+}
+
+.stackTitle {
+  color: var(--stack-border-color);
+  font-family: 'Fira Code', monospace;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 0 0 8px hsla(334, 100%, 50%, 0.6);
+  user-select: none;
+}
+
+.stackHeader {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #080205;
+  
+  margin: 0 -16px 20px -16px;
+  padding: 20px 16px 12px 16px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--stack-outline-color);
+}
+
+.stackCategory {
+    margin-bottom: 12px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Fira Code', monospace;
+    border-left: 4px solid currentColor;
+    padding-left: 10px;
+}
+
+.stackCategoryContainer {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+    justify-content: center;
+}
+
+.stackName {
+    margin-left: 16px;
+    font-size: 1em;
+    color: var(--stack-border-color);
+    font-family: 'JetBrains Mono', cursive, sans-serif;
+}
+
+.stackList {
+    list-style-type: none;
+    padding-left: 0;
+    display: list-item;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stackItemsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.stackName {
+    margin: 0;
+    font-size: 0.85em;
+    font-weight: 800;
+    color: #eee;
+    font-family: 'Fira Code', monospace;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    user-select: none;
+    text-overflow: ellipsis;
+}
+
+.stackItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 10px 18px;
+    border-radius: 0px;
+    background-color: #050505 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--tech-color);
+    
+    flex: 1 1 calc(50% - 10px);
+    min-width: 140px;
+    max-width: 100%; 
+    box-sizing: border-box; 
+
+    transition: all 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    cursor: default;
+}
+
+.stackIcon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    filter: invert(0.9) brightness(1.5);
+    transition: filter 0.2s;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.stackContainer::-webkit-scrollbar {
+    width: 12px;
+}
+
+.stackContainer::-webkit-scrollbar-track {
+    background: var(--stack-border-color);
+}
+
+.stackContainer::-webkit-scrollbar-thumb {
+    background: #050505;
+    border: 2px solid var(--stack-border-color);
+}
