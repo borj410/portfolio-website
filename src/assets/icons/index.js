@@ -1,6 +1,5 @@
 export { default as AgileIcon } from "./agile-icon.svg";
 export { default as AngularIcon } from "./angular-icon.svg";
-export { default as CanvaIcon } from "./canva-icon.svg";
 export { default as CSharpIcon } from "./c-sharp-icon.svg";
 export { default as CPlusPlusIcon } from "./cpp-icon.svg";
 export { default as CSSIcon } from "./css-icon.svg";
@@ -20,6 +19,7 @@ export { default as RestAPIIcon } from "./rest-api-icon.svg";
 export { default as KotlinIcon } from "./kotlin-icon.svg";
 export { default as LinkedInIcon } from "./linkedin-icon.svg";
 export { default as MailIcon } from "./mail-icon.svg";
+export { default as MiroIcon } from "./miro-icon.svg";
 export { default as MongoDBIcon } from "./mongodb-icon.svg";
 export { default as MySQLIcon } from "./mysql-icon.svg";
 export { default as PythonIcon } from "./python-icon.svg";

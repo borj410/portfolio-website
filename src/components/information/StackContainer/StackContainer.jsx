@@ -35,7 +35,7 @@ function StackContainer() {
 
     const stackDesign = [
         {name: "Figma", icon: Icons.FigmaIcon, color: "#F24E1E"},
-        {name: "Canva", icon: Icons.CanvaIcon, color: "#00C4CC"}
+        {name: "Miro", icon: Icons.MiroIcon, color: "#FF6B6B"},
     ];
 
     const stackMethodology = [
