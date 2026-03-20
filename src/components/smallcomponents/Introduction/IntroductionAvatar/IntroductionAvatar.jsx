@@ -75,7 +75,6 @@ function IntroductionAvatar() {
                             </div>
                             <div className={styles.metaData}>
                                 <p className={styles.locationLine}><span className={styles.label}>USER_ID:</span> GABRIEL BORJA</p>
-                                <p className={styles.locationLine}><span className={styles.label}>AGE:</span> 20 years</p>
                                 <p className={styles.locationLine}><span className={styles.label}>LOCATION:</span> LIMA, PERU</p>
                                 <p className={styles.locationLine}><span className={styles.label}>LANGUAGE:</span> ENGLISH // SPANISH</p>
                             </div>

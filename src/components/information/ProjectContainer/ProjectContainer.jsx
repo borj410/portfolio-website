@@ -46,19 +46,6 @@ function ProjectContainer() {
         stack: ["FLUTTER", "EF_CORE", "SQLITE"],
         buttons: [{ label: "GITHUB", url: "https://github.com/borj410/pokemon-mobile" }]
     },
-    {
-        id: "004",
-        name: "Portfolio_OS",
-        terminated: false,
-        minimized: false,
-        message: "Oops... (/_ \\)",
-        summary: "SYSTEM ALERT: YOU ARE CURRENTLY HERE!",
-        summaryKaomoji: "(?_?)",
-        image: Images.PortfolioOSImage,
-        description: "Interactive portfolio website, focusing on custom UI components and immersive user experience.",
-        stack: ["VITE + REACT"],
-        buttons: [{ label: "GITHUB", url: "https://github.com/borj410/portfolio-website" }]
-    },
     ]);
 
     const updateProjectStatus = (id, field, value) => {

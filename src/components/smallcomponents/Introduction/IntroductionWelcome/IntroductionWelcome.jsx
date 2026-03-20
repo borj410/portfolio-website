@@ -14,9 +14,9 @@ function IntroductionWelcome() {
             <div className={styles.systemDescription}>
                 <p><span aria-hidden="true">{'>'} </span>CURRENT_ROLE: <span className={styles.highlightText}>FULLSTACK_DEVELOPER</span></p>
                 <p><span aria-hidden="true">{'>'} </span>STATUS: <span className={styles.highlightText}>OPEN_TO_WORK</span></p>
-                <p aria-label="Core Tech: Vue.js, React.js, Flutter, and .NET">
+                <p aria-label="Core Tech: Angular, React.js, Flutter, and .NET">
                     <span aria-hidden="true">{'>'} </span>CORE_TECH: 
-                    <span className={styles.highlightText}> VUE.JS <span aria-hidden="true">//</span> REACT.JS <span aria-hidden="true">//</span> FLUTTER <span aria-hidden="true">//</span> .NET (EF_CORE)</span>
+                    <span className={styles.highlightText}> ANGULAR <span aria-hidden="true">//</span> REACT.JS <span aria-hidden="true">//</span> FLUTTER <span aria-hidden="true">//</span> .NET (EF_CORE)</span>
                 </p>
                 <p>
                     Software Engineering student building robust Full-Stack applications.

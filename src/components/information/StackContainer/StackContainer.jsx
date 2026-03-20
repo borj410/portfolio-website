@@ -3,12 +3,9 @@ import * as Icons from '../../../assets/icons';
 
 function StackContainer() {
     const stackFrontend = [
-        {name: "Angular.ts", icon: Icons.AngularIcon, color: "#E40035"},
+        {name: "Angular", icon: Icons.AngularIcon, color: "#DD0031"},
         {name: "Vue.js", icon: Icons.VueIcon, color: "#42b883"},
         {name: "React.js", icon: Icons.ReactIcon, color: "#61DBFB"},
-        {name: "HTML", icon: Icons.HTMLIcon, color: "#E34C26"},
-        {name: "CSS", icon: Icons.CSSIcon, color: "#1572B6"},
-        {name: "JavaScript", icon: Icons.JavaScriptIcon, color: "#F7DF1E"},
     ];
 
     const stackBackend = [
@@ -24,24 +21,15 @@ function StackContainer() {
     const stackDatabase = [
         {name: "MySQL", icon: Icons.MySQLIcon, color: "#00758f"},
         {name: "SQL Server", icon: Icons.SQLServerIcon, color: "#EC9700"},
-        {name: "MongoDB", icon: Icons.MongoDBIcon, color: "#00ED64"},
     ];
 
     const stackDevOps = [
-        {name: "GitHub", icon: Icons.GitHubIcon, color: "#5C6BC0"},
-        {name: "GitFlow", icon: Icons.GitFlowIcon, color: "#67349b"},
+        {name: "Git", icon: Icons.GitHubIcon, color: "#5C6BC0"},
         {name: "Docker", icon: Icons.DockerIcon, color: "#0db7ed"}
     ];
 
     const stackDesign = [
-        {name: "Figma", icon: Icons.FigmaIcon, color: "#F24E1E"},
-        {name: "Miro", icon: Icons.MiroIcon, color: "#FF6B6B"},
-    ];
-
-    const stackMethodology = [
-    {name: "Scrum", icon: Icons.ScrumIcon, color: "#FF7043"},
-    {name: "Lean UX", icon: Icons.UXIcon, color: "#00BCFF"},
-    {name: "Agile", icon: Icons.AgileIcon, color: "#4CAF50"},
+        {name: "Figma", icon: Icons.FigmaIcon, color: "#ffffff"},
     ];
 
     const stackOther = [
@@ -57,7 +45,6 @@ function StackContainer() {
         {name: "Database", stack: stackDatabase, color: "#4ECDC4"},
         {name: "Dev Ops", stack: stackDevOps, color: "#FFE66D"},
         {name: "Design & UX", stack: stackDesign, color: "#F24E1E"},
-        {name: "Methodology", stack: stackMethodology, color: "#FF7043"},
         {name: "Other", stack: stackOther, color: "#A0D2EB"}
     ]
 
