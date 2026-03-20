@@ -1,7 +1,9 @@
 :root {
-  --project-background-color: hsla(210, 50%, 4%, 0.8); 
-  --project-border-color: hsla(185, 100%, 50%, 1);
-  --project-outline-color: hsla(185, 100%, 50%, 0.15);
+  --project-border-color: hsla(187, 61%, 74%, 1);
+  --project-background-color: hsla(279, 37%, 5%, 0.85); 
+  --project-accent-color: hsla(187, 37%, 62%, 1);
+
+  --project-card-border-color: rgba(146, 220, 229, 0.1); 
 }
 
 .projectContainer {
@@ -12,7 +14,7 @@
   max-height: 990px;
   
   border: 2px solid var(--project-border-color);
-  outline: 4px solid var(--project-outline-color);
+  outline: none;
   backdrop-filter: blur(8px);
 
   padding: 0 16px 16px 16px; 
@@ -33,7 +35,6 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0;
-  text-shadow: 0 0 8px hsla(185, 100%, 50%, 0.6);
   user-select: none;
   text-transform: uppercase;
 }
@@ -57,7 +58,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--project-outline-color);
+  border-bottom: 2px solid var(--project-border-color);
+  user-select: none;
 }
 
 .systemStatus {
@@ -66,6 +68,7 @@
     color: var(--project-border-color);
     animation: blink 1.5s infinite;
     text-transform: uppercase;
+    opacity: 0.8;
 }
 
 @keyframes blink {

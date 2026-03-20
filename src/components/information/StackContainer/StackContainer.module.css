@@ -1,7 +1,6 @@
 :root {
   --stack-background-color: hsla(334, 70%, 4%, 0.8); 
   --stack-border-color: hsla(334, 67%, 55%, 1); 
-  --stack-outline-color: hsla(334, 67%, 50%, 0.2);
 }
 
 .stackContainer {
@@ -12,7 +11,6 @@
   max-height: 990px;
 
   border: 2px solid var(--stack-border-color);
-  outline: 4px solid var(--stack-outline-color);
   backdrop-filter: blur(4px); 
 
   padding: 0 16px 16px 16px; 
@@ -32,7 +30,6 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0;
-  text-shadow: 0 0 8px hsla(334, 100%, 50%, 0.6);
   user-select: none;
 }
 
@@ -48,7 +45,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--stack-outline-color);
+  border-bottom: 2px solid var(--stack-border-color);
+  user-select: none;
 }
 
 .stackCategory {

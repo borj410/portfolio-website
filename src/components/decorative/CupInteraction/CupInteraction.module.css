@@ -1,6 +1,5 @@
 .cupInteraction {
     --interactive-border-color: hsla(340, 65%, 69%, 1);
-    --interactive-outline-color: hsla(340, 65%, 69%, 0.15);
     
     position: relative;
     width: 100%;
@@ -9,7 +8,6 @@
     min-height: 250px;
     background-color: black;
     border: 2px solid var(--interactive-border-color);
-    outline: 4px solid var(--interactive-outline-color);
     backdrop-filter: blur(8px);
     overflow: hidden;
     display: flex;
