@@ -24,6 +24,7 @@ export { default as MongoDBIcon } from "./mongodb-icon.svg";
 export { default as MySQLIcon } from "./mysql-icon.svg";
 export { default as PythonIcon } from "./python-icon.svg";
 export { default as ScrumIcon } from "./scrum-icon.svg";
+export { default as SpringBootIcon } from "./spring-boot-icon.svg";
 export { default as SQLServerIcon } from "./sql-server-icon.svg";
 export { default as UXIcon } from "./ux-icon.svg";
 export { default as VueIcon } from "./vue-icon.svg";

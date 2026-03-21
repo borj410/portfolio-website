@@ -10,7 +10,7 @@ function StackContainer() {
 
     const stackBackend = [
         {name: "Entity Framework Core", icon: Icons.DotNetIcon, color: "#007ACC"},
-        {name: "Spring Boot (Java)", icon: Icons.JavaIcon, color: "#6CB52D"},
+        {name: "Spring Boot", icon: Icons.SpringBootIcon, color: "#6CB52D"},
     ];
 
     const stackMobile = [
@@ -21,6 +21,7 @@ function StackContainer() {
     const stackDatabase = [
         {name: "MySQL", icon: Icons.MySQLIcon, color: "#00758f"},
         {name: "SQL Server", icon: Icons.SQLServerIcon, color: "#EC9700"},
+        {name: "MongoDB", icon: Icons.MongoDBIcon, color: "#4DB33D"}
     ];
 
     const stackDevOps = [
